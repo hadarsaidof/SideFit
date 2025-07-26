@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideFit - ויזואליזציה של נתונים</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* פונט בסיסי */
+            line-height: 1.6; /* רווח בין שורות */
+            margin: 20px; /* שוליים מסביב לעמוד */
+            padding: 0;
+            background-color: #f4f4f4; /* צבע רקע בהיר */
+            color: #333; /* צבע טקסט ראשי */
+            direction: rtl; /* כיווניות טקסט מימין לשמאל */
+            text-align: right; /* יישור טקסט לימין */
+        }
+        header {
+            background-color: #4CAF50; /* צבע ירוק כהה לכותרת עליונה */
+            color: #fff; /* צבע טקסט לבן */
+            padding: 15px 0; /* ריווח פנימי */
+            text-align: center; /* יישור למרכז */
+            border-bottom: 5px solid #45a049; /* קו תחתון ירוק כהה יותר */
+        }
+        .container {
+            max-width: 900px; /* רוחב מקסימלי לתוכן */
+            margin: 20px auto; /* ממורכז בדף עם שוליים למעלה ולמטה */
+            background: #fff; /* רקע לבן לתוכן */
+            padding: 30px; /* ריווח פנימי */
+            border-radius: 8px; /* פינות מעוגלות */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* צל עדין */
+        }
+        h1, h2, h3 {
+            color: #333; /* צבע כותרות */
+            text-align: right; /* יישור לימין */
+            border-bottom: 2px solid #eee; /* קו תחתון עדין לכותרות */
+            padding-bottom: 10px; /* ריווח מתחת לקו */
+            margin-top: 25px; /* ריווח מעל כותרות */
+        }
+        .site-explanation {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px dotted #ccc; /* קו הפרדה מנוקד */
+        }
+        .dashboard-section {
+            margin-bottom: 30px; /* רווח בין קטעי הדשבורדים */
+            padding-bottom: 20px; /* ריווח פנימי בתחתית הקטע */
+            border-bottom: 1px dashed #eee; /* קו הפרדה מקווקו */
+        }
+        .dashboard-section:last-child {
+            border-bottom: none; /* ביטול קו הפרדה לקטע האחרון */
+        }
+        .dashboard-button {
+            display: inline-block; /* מאפשר הגדרת רוחב, ריווח ושוליים */
+            background-color: #007bff; /* צבע רקע כחול לכפתור */
+            color: white; /* צבע טקסט לבן */
+            padding: 10px 20px; /* ריווח פנימי בכפתור */
+            border-radius: 5px; /* פינות מעוגלות לכפתור */
+            text-align: center;
+            text-decoration: none; /* הסרת קו תחתון מקישור */
+            margin-top: 15px; /* רווח מעל הכפתור */
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* מעבר חלק בצבע הרקע בריחוף */
+        }
+        .dashboard-button:hover {
+            background-color: #0056b3; /* צבע כחול כהה יותר בריחוף */
+        }
+        p {
+            margin-bottom: 15px; /* רווח אחרי פסקאות */
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            color: #777;
+            font-size: 0.9em;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SideFit - מערכת ויזואליזציה וניתוח נתונים</h1>
+    </header>
+    <div class="container">
+        <h2>תיאור מערכת המידע</h2>
+        <p>המערכת המוצגת כאן מתארת ממשק לניהול וניתוח נתונים עבור סטודיו 'SideFit' בתל אביב, הממוקם ברחוב בן גוריון. 'SideFit' הוא סטודיו לאימונים המיועד בלעדית לנשים.</p>
+        <p>מטרת המערכת היא לספק תובנות ויזואליות לגבי ביצועי הסטודיו, ניהול מנויים, תפוסת שיעורים והתקדמות מתאמנות. המערכת תומכת במקבלי החלטות בהנהלה (בעלים ומנהלים כלליים) בקבלת החלטות אסטרטגיות ארוכות טווח, מסייעת לצוות הקבלה בניהול שוטף של הרשמות ומנויים, ומאפשרת למאמנות לעקוב אחר ביצועי המתאמנות ושיפור תוכניות האימונים.</p>
+
+        <p class="site-explanation">
+            אתר זה נוצר במסגרת פרויקט קורס "ויזואליזציה של מידע" ומציג באופן מרוכז ונגיש את הדשבורדים המרכזיים שפותחו ב-Tableau Public. דשבורדים אלו מספקים תובנות מותאמות אישית לצרכים שונים בסטודיו SideFit.
+        </p>
+
+        <h2>הדשבורדים שלנו ב-Tableau Public</h2>
+
+        <div class="dashboard-section">
+            <h3>דשבורד אסטרטגי: ביצועים עסקיים ורווחיות</h3>
+            <p>דשבורד זה מיועד להנהלה הבכירה של הסטודיו (בעלים ומנהלים כלליים). הוא כולל תרשימים המציגים מגמות הכנסה, רווחיות כוללת והשוואות ביצועים בין סוגי אימונים ומאמנות. מטרתו העיקרית היא לסייע בקבלת החלטות אסטרטגיות ארוכות טווח, כגון תמחור מוצרים, זיהוי מוצרים אטרקטיביים ואופטימיזציה של תזרים המזומנים.</p>
+            <a href=https://public.tableau.com/views/sidefit/sheet2?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link>צפה בדשבורד האסטרטגי</a>
+        </div>
+
+        <div class="dashboard-section">
+            <h3>דשבורד ניהולי: סטאטוס מנויים ותפוסת שיעורים</h3>
+            <p>דשבורד זה מיועד לצוות הקבלה והמזכירות של הסטודיו. הוא מציג תמונת מצב עדכנית של סטאטוס המנויים (פעילים מול לא פעילים) ונתוני תפוסת שיעורים יומית. מטרתו לייעל את הניהול השוטף, לאתר מנויות הדורשות חידוש מנוי, ולתכנן לו"ז אימונים בצורה אפקטיבית בהתאם לעומסים.</p>
+            <a href=https://public.tableau.com/views/sidefit/sheet3?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link>צפה בדשבורד הניהולי</a>
+        </div>
+
+        <div class="dashboard-section">
+            <h3>דשבורד תפעולי: נוכחות והתקדמות מתאמנות</h3>
+            <p>דשבורד זה נועד לשמש את המאמנות האישיות והקבוצתיות של הסטודיו. הוא מאפשר מעקב אחר נוכחות מתאמנות באימונים וכן אחר מדדי ההתקדמות האישיים והקבוצתיים שלהן. מטרתו לסייע למאמנות להתאים תוכניות אימון, לספק משוב ממוקד ויעיל למתאמנות, ולשפר את חווית האימון הכללית.</p>
+            <a href=https://public.tableau.com/views/sidefit/sheet6?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link>צפה בדשבורד התפעולי</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 SideFit. כל הזכויות שמורות.</p>
+    </footer>
+</body>
+</html>
